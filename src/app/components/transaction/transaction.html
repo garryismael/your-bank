@@ -1,0 +1,26 @@
+<div
+  class="relative"
+  [ngStyle]="{
+    opacity: opacity(),
+    padding: padding(),
+    zIndex: zIndex()
+  }"
+>
+  <div
+    class="flex items-center justify-between bg-gray-shades-11 border border-gray-shades-11 rounded-md"
+    [ngStyle]="{ padding: paddingInner(), margin: margin() }"
+  >
+    <div class="flex items-center gap-1.5">
+      <div
+        class="size-6 flex items-center justify-center rounded-full text-gray-shades-11 bg-green-shades-60"
+      >
+        <ng-icon name="heroArrowsRightLeft" size="14" />
+      </div>
+      <div>
+        <h5 class="text-[9px] font-light leading-3">Transaction</h5>
+        <p class="text-[10px] leading-3.5">{{ name() }}</p>
+      </div>
+    </div>
+    <p class="text-xs font-medium leading-4">{{ balance() | currency }}</p>
+  </div>
+</div>
