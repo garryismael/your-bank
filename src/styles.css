@@ -38,6 +38,6 @@
 @layer components {
   .btn-primary {
     border-radius: 82px;
-    @apply bg-green-shades-60 px-6 py-3.5 text-gray-shades-11 font-normal text-sm leading-[150%];
+    @apply bg-green-shades-60 px-6 py-3.5 text-gray-shades-11 font-normal text-sm leading-[150%] hover:bg-green-shades-65 active:bg-green-shades-70 transition duration-150 ease-out transform active:scale-95;
   }
 }
