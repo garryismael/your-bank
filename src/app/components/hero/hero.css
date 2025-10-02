@@ -1,0 +1,25 @@
+.sub-container {
+  padding: 158px 16px 0 16px;
+}
+
+.abstract-design {
+  width: 381.997px;
+  height: 307.417px;
+  left: 0px;
+  top: -10px;
+}
+
+.h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 8px;
+}
+
+.paragraph{
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 150%;
+}

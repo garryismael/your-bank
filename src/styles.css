@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-green-shades-60: #caff33;
+  --color-green-shades-65: #d1ff4c;
+  --color-green-shades-70: #d8ff66;
+  --color-green-shades-80: #e5ff99;
+  --color-green-shades-90: #f2ffcc;
+  --color-green-shades-95: #f8ffe5;
+  --color-green-shades-97: #fbfff0;
+  --color-green-shades-99: #fefffa;
+
+  --color-white-shades-90: #e4e4e7;
+  --color-white-shades-95: #f1f1f3;
+  --color-white-shades-97: #f7f7f8;
+  --color-white-shades-99: #fcfcfd;
+
+  --color-gray-shades-10: #191919;
+  --color-gray-shades-11: #1c1c1c;
+  --color-gray-shades-15: #262626;
+  --color-gray-shades-20: #333333;
+  --color-gray-shades-30: #4c4c4d;
+  --color-gray-shades-35: #59595a;
+  --color-gray-shades-40: #656567;
+  --color-gray-shades-60: #98989a;
+  --color-gray-shades-70: #b3b3b3;
+  --color-gray-shades-75: #bfbfbf;
+
+  --font-lexend: 'Lexend', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-shades-10 font-lexend text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    border-radius: 82px;
+    @apply bg-green-shades-60 px-6 py-3.5 text-gray-shades-11 font-normal text-sm leading-[150%];
+  }
+}
