@@ -15,7 +15,7 @@
   --color-white-shades-97: #f7f7f8;
   --color-white-shades-99: #fcfcfd;
 
-  --color-gray-shades-10: #1A1A1A;
+  --color-gray-shades-10: #1a1a1a;
   --color-gray-shades-11: #1c1c1c;
   --color-gray-shades-15: #262626;
   --color-gray-shades-20: #333333;
@@ -33,12 +33,23 @@
   body {
     @apply bg-gray-shades-10 font-lexend text-white overflow-x-hidden;
   }
+
+  .title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 150%;
+  }
 }
 
 @layer components {
   .btn-primary {
     border-radius: 82px;
     @apply bg-green-shades-60 px-6 py-3.5 text-gray-shades-11 font-normal text-sm leading-[150%] hover:bg-green-shades-65 active:bg-green-shades-70 transition duration-150 ease-out transform active:scale-95;
+  }
+
+  .btn-ghost {
+    border-radius: 82px;
+    @apply px-6 py-3.5 text-white font-normal text-sm leading-[150%] hover:bg-green-shades-65;
   }
 
   .bg-hero {

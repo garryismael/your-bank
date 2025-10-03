@@ -3,5 +3,5 @@
 .header {
   padding: 14px 14px 14px 24px;
   border-radius: 100px;
-  @apply fixed top-10 left-4 right-4 flex items-center justify-between border border-gray-shades-15 bg-gray-shades-11;
+  @apply absolute top-10 left-4 right-4 flex items-center justify-between border border-gray-shades-15 bg-gray-shades-11 z-40;
 }
