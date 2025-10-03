@@ -31,7 +31,7 @@
 
 @layer base {
   body {
-    @apply bg-gray-shades-10 font-lexend text-white;
+    @apply bg-gray-shades-10 font-lexend text-white overflow-x-hidden;
   }
 }
 

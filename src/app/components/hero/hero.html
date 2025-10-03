@@ -44,7 +44,10 @@
         <p class="income-text">Monthly Income</p>
       </div>
     </div>
-    <div class="p-5 border border-gray-shades-15 rounded-md">
+    <div class="absolute -top-5 -right-5 -z-20">
+      <img ngSrc="images/abstract-design-1.svg" width="219" height="201" />
+    </div>
+    <div class="relative p-5 bg-gray-shades-10 border border-gray-shades-15 rounded-md">
       <div>
         <h3 class="text-[10px] leading-3.5">Your Transaction</h3>
         @for (transaction of transactions; track transaction.id) {
