@@ -1,5 +1,6 @@
 <div
-  class="relative"
+  class="relative bg-gray-shades-11"
+  [ngClass]="borderCls()"
   [ngStyle]="{
     opacity: opacity(),
     padding: padding(),
@@ -7,8 +8,8 @@
   }"
 >
   <div
-    class="flex items-center justify-between bg-gray-shades-11 border border-gray-shades-11 rounded-md"
-    [ngStyle]="{ padding: paddingInner(), margin: margin() }"
+    class="relative flex items-center justify-between  rounded-md"
+    [ngStyle]="{ padding: paddingInner(), margin: margin(), zIndex: zIndex() }"
   >
     <div class="flex items-center gap-1.5">
       <div

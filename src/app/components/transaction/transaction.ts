@@ -18,4 +18,5 @@ export class Transaction {
   paddingInner = input<string>();
   margin = input<string>();
   zIndex = input<number>();
+  borderCls = input<string>();
 }

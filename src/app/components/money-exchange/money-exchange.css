@@ -1,0 +1,19 @@
+.currency {
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.currency-state {
+  font-size: 8px;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.exchange {
+  padding: 15px 10px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 150%;
+}

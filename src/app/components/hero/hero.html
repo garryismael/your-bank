@@ -1,4 +1,4 @@
-<div class="absolute -z-10 abstract-design">
+<div class="fixed -z-10 abstract-design">
   <img
     ngSrc="images/abstract-design-2.svg"
     width="249"
@@ -7,7 +7,7 @@
     priority
   />
 </div>
-<section>
+<section class="px-4 pb-16">
   <div class="sub-container mb-[30px]">
     <div
       class="w-fit mx-auto px-4 py-2 flex items-center gap-1 bg-gray-shades-15 rounded-full mb-3"
@@ -30,8 +30,10 @@
     </div>
   </div>
   <button class="btn-primary mx-auto block">Open Account</button>
-  <div>
-    <div class="inline-flex items-center gap-1.5 py-2 px-2.5 bg-[#22251B] rounded-md">
+  <div class="relative px-[26px] mt-20 mb-2.5">
+    <div
+      class="absolute -top-5 -left-2.5 z-10 inline-flex items-center gap-1.5 py-2 px-2.5 bg-[#22251B] rounded-md"
+    >
       <button
         class="bg-green-shades-60 text-gray-shades-10 rounded-full size-7 flex items-center justify-center"
       >
@@ -42,36 +44,50 @@
         <p class="income-text">Monthly Income</p>
       </div>
     </div>
-    <div>
-      <h3 class="text-[10px] leading-3.5">Your Transaction</h3>
-      @for (transaction of transactions; track transaction.id) {
-      <div
-        class="relative"
-        [ngStyle]="{
-          opacity: transaction.opacity,
-          padding: transaction.padding,
-          zIndex: transaction.zIndex
-        }"
-      >
-        <div
-          class="flex items-center justify-between bg-gray-shades-11 border border-gray-shades-11 rounded-md"
-          [ngStyle]="{ padding: transaction.paddingInner, margin: transaction.margin }"
-        >
-          <div class="flex items-center gap-1.5">
-            <div
-              class="size-6 flex items-center justify-center rounded-full text-gray-shades-11 bg-green-shades-60"
-            >
-              <ng-icon name="heroArrowsRightLeft" size="14" />
-            </div>
-            <div>
-              <h5 class="text-[9px] font-light leading-3">Transaction</h5>
-              <p class="text-[10px] leading-3.5">{{ transaction.name }}</p>
-            </div>
-          </div>
-          <p class="text-xs font-medium leading-4">{{ transaction.balance | currency }}</p>
-        </div>
+    <div class="p-5 border border-gray-shades-15 rounded-md">
+      <div>
+        <h3 class="text-[10px] leading-3.5">Your Transaction</h3>
+        @for (transaction of transactions; track transaction.id) {
+        <app-transaction
+          [name]="transaction.name"
+          [balance]="transaction.balance"
+          [opacity]="transaction.opacity"
+          [padding]="transaction.padding"
+          [paddingInner]="transaction.paddingInner"
+          [margin]="transaction.margin"
+          [zIndex]="transaction.zIndex"
+          [borderCls]="transaction.borderCls"
+        />
+        }
       </div>
-      }
+      <app-money-exchange />
+    </div>
+  </div>
+  <div class="flex items-center gap-1.5 w-fit ml-auto bg-[#22251B] py-1.5 px-3 rounded-full">
+    <p class="text-[10px] leading-[150%]">Supported Currency</p>
+    <div
+      class="rounded-[28px] bg-gray-shades-10 border border-gray-shades-15 flex items-center gap-1 p-[5px]"
+    >
+      <div
+        class="size-5 flex items-center justify-center bg-gray-shades-15 rounded-full text-green-shades-60"
+      >
+        <ng-icon name="faSolidDollarSign" size="14" />
+      </div>
+      <div
+        class="size-5 flex items-center justify-center bg-gray-shades-15 rounded-full text-green-shades-60"
+      >
+        <ng-icon name="faSolidEuroSign" size="14" />
+      </div>
+      <div
+        class="size-5 flex items-center justify-center bg-gray-shades-15 rounded-full text-green-shades-60"
+      >
+        <ng-icon name="faSolidBitcoinSign" size="14" />
+      </div>
+      <div
+        class="size-5 flex items-center justify-center bg-gray-shades-15 rounded-full text-green-shades-60"
+      >
+        <ng-icon name="faBrandEthereum" size="14" />
+      </div>
     </div>
   </div>
 </section>
