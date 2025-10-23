@@ -30,7 +30,7 @@
     </div>
   </div>
   <button class="btn-primary mx-auto block">Open Account</button>
-  <div class="relative px-[26px] pt-20 mb-2.5 overflow-hidden">
+  <div class="relative px-[26px] max-[321px]:px-0 pt-20 mb-2.5 overflow-hidden">
     <div
       class="absolute top-14 -left-2.5 z-10 inline-flex items-center gap-1.5 py-2 px-2.5 bg-[#22251B] rounded-md"
     >
@@ -47,7 +47,7 @@
     <div class="absolute top-15 -right-5 -z-20">
       <img ngSrc="images/abstract-design-1.svg" width="219" height="201" />
     </div>
-    <div class="relative p-5 bg-gray-shades-10 border border-gray-shades-15 rounded-md">
+    <div class="relative p-5 max-[321px]:p-0.5 bg-gray-shades-10 border border-gray-shades-15 rounded-md">
       <div>
         <h3 class="text-[10px] leading-3.5">Your Transaction</h3>
         @for (transaction of transactions; track transaction.id) {
